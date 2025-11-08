@@ -1,0 +1,45 @@
+@Entry
+@Component
+struct Index {
+
+
+  build() {
+    Column(){
+      //页面头部
+      Row(){
+        //福州
+        Row(){
+          Text('福州').fontColor(Color.White).fontSize(15)
+          Image($r('app.media.xiajiantou')).height(15).fillColor(Color.White)
+        }
+
+        //中部搜索区域
+        Row(){
+          Image($r('app.media.top_saoma')).height(15).margin({left:5})
+          Image($r('app.media.top_shuxian')).height(15).fillColor('#F71FAC')
+          Text('搜索提示').fontColor(Color.Gray).fontSize(10)
+          Text('搜索')
+            .fontColor(Color.White)
+            .width(40)
+            .fontSize(12)
+            .backgroundColor(Color.Pink)
+            .margin({ top: 5, bottom: 5, left: 130 })
+            .borderRadius(10)
+            .textAlign(TextAlign.Center)
+        }
+        .backgroundColor(Color.White)
+        .height(25)
+        .borderRadius({topLeft:10,topRight:12,bottomRight:12})
+        .width(250)
+        //信息图标
+        Image($r('app.media.top_xiaoxi')).height(15).fillColor(Color.White)
+      }
+      .width('100%')
+      .height(30)
+      .backgroundColor(Color.Pink)
+      .justifyContent(FlexAlign.SpaceAround)
+
+    }
+
+  }
+}
