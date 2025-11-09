@@ -1,0 +1,338 @@
+@Entry
+@Component
+struct Index {
+
+
+  build() {
+      Stack({alignContent:Alignment.Bottom}){
+        //主体功能区
+        Scroll(){
+          Column(){
+            //页面头部
+            Row(){
+              //福州
+              Row(){
+                Text('福州').fontColor(Color.White).fontSize(15)
+                Image($r('app.media.xiajiantou')).height(15).fillColor(Color.White)
+              }
+
+              //中部搜索区域
+              Row(){
+                Image($r('app.media.top_saoma')).height(15).margin({left:5})
+                Image($r('app.media.top_shuxian')).height(15).fillColor('#F71FAC')
+                Text('搜索提示').fontColor(Color.Gray).fontSize(10)
+                Text('搜索')
+                  .fontColor(Color.White)
+                  .width(40)
+                  .fontSize(12)
+                  .backgroundColor(Color.Pink)
+                  .margin({ top: 5, bottom: 5, left: 130 })
+                  .borderRadius(10)
+                  .textAlign(TextAlign.Center)
+              }
+              .backgroundColor(Color.White)
+              .height(25)
+              .borderRadius({topLeft:10,topRight:12,bottomRight:12})
+              .width(250)
+              //信息图标
+              Image($r('app.media.top_xiaoxi')).height(15).fillColor(Color.White)
+            }
+            .width('100%')
+            .height(30)
+
+            .justifyContent(FlexAlign.SpaceAround)
+            //抢票预约区域
+            Column(){
+              //我的抢票预约
+              Row(){
+                Text('我的抢票预约').fontSize(20).fontColor(Color.Red)
+                Text('一键抢票 一键直达').fontSize(15).margin({left:10})
+              }.justifyContent(FlexAlign.SpaceBetween)
+              // 图片 文字区
+              Row(){
+                Image($r('app.media.logo_dzq')).height(60).borderRadius(30).border({width:3,color:Color.Yellow})
+                Column(){
+                  Text('[福州]G.E.M邓紫棋 I AM GLORIA世界巡回演唱会2.0-福州站')
+                    .fontSize(10)
+                    .textOverflow({ overflow: TextOverflow.Ellipsis })
+                  Row(){
+                    Text('￥460 × 1张').margin({right:20})//后期要改成动态的s
+                    Text('准备抢票').backgroundColor(Color.Pink).fontColor(Color.White).fontSize(25)
+                  }
+                  .justifyContent(FlexAlign.SpaceBetween)
+                }
+              }
+            }
+
+            .backgroundColor(Color.White)
+            .margin(10)
+            .borderRadius(20)
+
+            //功能区
+            Column(){
+              //第一行
+              Row(){
+                Column(){
+                  Image($r('app.media.logo_yanchanghui')).height(30)
+                  Text('演唱会').fontSize(12).lineHeight(15)
+                }
+                Column(){
+                  Image($r('app.media.logo_musicfestival')).height(30)
+                  Text('音乐节').fontSize(12).lineHeight(15)
+                }
+                Column(){
+                  Image($r('app.media.logo_jita')).height(30)
+                  Text('livehouse').fontSize(12).lineHeight(15)
+                }
+                Column(){
+                  Image($r('app.media.logo_huaju')).height(30)
+                  Text('歌剧话剧').fontSize(12).lineHeight(15)
+                }
+                Column(){
+                  Image($r('app.media.logo_tuokouxiu')).height(30)
+                  Text('脱口秀').fontSize(12).lineHeight(15)
+                }
+              }
+              .margin({top:10})
+              .width('100%')
+              .justifyContent(FlexAlign.SpaceAround)
+              //第二行
+              Row(){
+                Column(){
+                  Image($r('app.media.logo_zhanlan')).height(30)
+                  Text('展览').fontSize(12).lineHeight(15)
+                }
+                Column(){
+                  Image($r('app.media.logo_travel')).height(30)
+                  Text('旅游').fontSize(12).lineHeight(15)
+                }
+                Column(){
+                  Image($r('app.media.logo_movie')).height(30)
+                  Text('电影').fontSize(12).lineHeight(15)
+                }
+                Column(){
+                  Image($r('app.media.logo_dance')).height(30)
+                  Text('舞蹈').fontSize(12).lineHeight(15)
+                }
+                Column(){
+                  Image($r('app.media.logo_all')).height(30)
+                  Text('全部').fontSize(12).lineHeight(15)
+                }
+              }
+              .margin({top:20,bottom:10})
+              .width('100%')
+              .justifyContent(FlexAlign.SpaceAround)
+
+            }
+
+            .borderRadius(20)
+            .margin(10)
+
+            .backgroundColor(Color.White)
+
+            Row(){
+              //抢票播报站
+              Column(){
+                Row(){
+                  Text('抢票播报站')
+                  Row(){
+                    Text('张学友广州').fontSize(11).fontColor(Color.Red)
+                    Image($r('app.media.right_string')).height(10).fillColor(Color.Red)
+                  }
+                }
+                Row(){
+                  Image($r('app.media.logo_dzq')).height(20)
+                  Text('[福州]G.E.M邓紫棋 I AM GLORIA世界巡回演唱会2.0-福州站')
+                    .fontSize(12)
+                    .lineHeight(15)
+                    .textOverflow({overflow:TextOverflow.Ellipsis})
+                    .maxLines(2)
+                }
+                Row(){
+                  Text('19.9').fontSize(10).fontColor(Color.Red)
+                  Text('万人想看').fontSize(10)
+                }
+                Row(){
+                  Text('02:10:13').fontColor(Color.White)
+                  Text('抢').fontColor(Color.White)
+                }
+                .backgroundColor(Color.Red)
+                .borderRadius(10)
+              }
+              .width('50%')
+              .backgroundColor(Color.White)
+              .height(100)
+              .margin({right:2})
+
+              //天天低价
+              Column(){
+                Row(){
+                  Text('天天低价')
+                  Row(){
+                    Text('领券购票更优惠').fontSize(11)
+                    Image($r('app.media.right_string')).height(10)
+                  }
+                }
+                Row(){
+                  Column(){
+                    Image($r('app.media.photo_animal')).height(50)
+                    Text('￥99起').fontSize(12)
+                  }
+                  Column(){
+                    Image($r('app.media.photo_huaju')).height(50)
+                    Text('￥100起').fontSize(12)
+                  }
+                }.justifyContent(FlexAlign.SpaceBetween)
+
+              }
+              .margin({left:2})
+
+              .width('50%')
+              .height(100)
+              .backgroundColor(Color.White)
+            }
+            .margin(10)
+
+            //演出日历 大麦演出榜
+            Row(){
+              //演出日历
+              Row(){
+                Column(){
+                  Text('演出日历').fontSize(20).fontWeight(FontWeight.Bold)
+                  Text('按时间选演出').fontSize(15)
+                }
+                Image($r('app.media.logo_rili')).height(30)
+
+              }
+              .backgroundColor(Color.White)
+
+              //大麦演出榜
+              Row(){
+                Column(){
+                  Text('大麦演出榜').fontSize(20).fontWeight(FontWeight.Bold)
+                  Text('你的观影指南').fontSize(15)
+                }
+                Image($r('app.media.logo_paihangbang')).height(30)
+
+              }
+              .backgroundColor(Color.White)
+
+              //大麦团购
+              Row(){
+                Column(){
+                  Text('大麦团购').fontSize(20).fontWeight(FontWeight.Bold)
+                  Text('超低价随时退').fontSize(15)
+                }
+                Image($r('app.media.right_string')).height(30)
+
+              }
+              .backgroundColor(Color.White)
+
+            }
+            .justifyContent(FlexAlign.SpaceBetween)
+
+            //轮播图区域//
+            //还没学
+            Column(){
+              Text('测试')
+              Text('测试')
+              Text('测试')
+              Text('测试')
+              Text('测试')
+              Text('测试')
+              Text('测试')
+
+            }
+
+
+
+            //必看演出
+            Column(){
+              Text('必看演出').fontSize(20).fontWeight(FontWeight.Bolder).lineHeight(30).textAlign(TextAlign.Start)
+              Row(){
+                Column(){
+                  Image($r('app.media.photo_1')).height(100)
+                  Text('2026跨年演唱会「以爱之名」—北京站')
+                    .fontSize(15)
+                    .textOverflow({overflow:TextOverflow.Ellipsis})
+                    .maxLines(2)
+                }.width(100)
+                Column(){
+                  Image($r('app.media.photo_2')).height(100)
+                  Text('曾轶可「迷人的危险Captivating Danger」巡演·北京站（返场）')
+                    .fontSize(15)
+                    .textOverflow({overflow:TextOverflow.Ellipsis})
+                    .maxLines(2)
+                }.width(100)
+                Column(){
+                  Image($r('app.media.photo3')).height(100)
+                  Text('杨丽萍作品 2022版舞剧《孔雀》')
+                    .fontSize(15)
+                    .textOverflow({overflow:TextOverflow.Ellipsis})
+                    .maxLines(2)
+                }.width(100)
+                Column(){
+                  Image($r('app.media.photo4')).height(100)
+                  Text('德云社综艺体育赛事-廊坊站')
+                    .fontSize(15)
+                    .textOverflow({overflow:TextOverflow.Ellipsis})
+                    .maxLines(2)
+                }.width(100)
+                Column(){
+                  Image($r('app.media.photo5')).height(100)
+                  Text('开心麻花沉浸式亲子儿童剧《小猪佩奇之奇妙一日游》')
+                    .fontSize(15)
+                    .textOverflow({overflow:TextOverflow.Ellipsis})
+                    .maxLines(2)
+                }.width(100)
+
+              }
+
+            }
+            .backgroundColor(Color.White)
+            .margin({top:10})
+
+          }
+          .backgroundColor(Color.Pink)
+          // .height('100%')
+          // .width("100%")
+
+        }
+        //tab区
+        Row(){
+          Column(){
+            Image($r('app.media.tab_shouye')).height(20)
+            Text('精选').fontSize(13).lineHeight(20)
+          }
+          Column(){
+            Image($r('app.media.tab_xianchang')).height(20)
+            Text('现场').fontSize(13).lineHeight(20)
+          }
+          Column(){
+            Image($r('app.media.tab_vip')).height(20)
+            Text('大麦VIP').fontSize(13).lineHeight(20)
+          }
+          Column(){
+            Image($r('app.media.tab_ticket')).height(20)
+            Text('票夹').fontSize(13).lineHeight(20)
+          }
+          Column(){
+            Image($r('app.media.tab_my')).height(20)
+            Text('我的').fontSize(13).lineHeight(20)
+          }
+
+        }
+        .justifyContent(FlexAlign.SpaceAround)
+        .width('100%')
+        .height(50)
+        .backgroundColor(Color.White)
+      }
+
+
+
+
+
+    }
+
+
+  }
